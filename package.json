@@ -4,7 +4,7 @@
   "description": "Blazing fast image optimization",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "ts-node blim.ts"
   },
   "author": "Fabian Keller <dev@fabian-keller.de>",
@@ -14,8 +14,11 @@
     "sharp": "^0.25.4"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
     "@types/sharp": "^0.25.0",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   }
