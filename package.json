@@ -1,19 +1,41 @@
 {
   "name": "blim",
+  "description": "Blazing fast image optimisation for blog post images",
   "version": "0.0.1",
-  "description": "Blazing fast image optimization",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "start": "ts-node blim.ts"
-  },
   "author": "Fabian Keller <dev@fabian-keller.de>",
   "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "blim": "./bin/run"
+  },
+  "bugs": "https://github.com/FaKeller/blim/issues",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "blim",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "prepack": "rm -rf lib && npm run build && oclif-dev manifest && oclif-dev readme",
+    "postpack": "rm -f oclif.manifest.json",
+    "test": "jest",
+    "start": "ts-node blim.ts",
+    "version": "oclif-dev readme && git add README.md"
+  },
   "dependencies": {
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^3.1.0",
     "chalk": "^4.1.0",
-    "sharp": "^0.25.4"
+    "sharp": "^0.25.4",
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.6",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
     "@types/sharp": "^0.25.0",
@@ -21,5 +43,18 @@
     "ts-jest": "^26.1.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
-  }
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "keywords": [
+    "blog",
+    "image",
+    "image-processing",
+    "image-optimization",
+    "compression"
+  ]
 }
