@@ -1,4 +1,6 @@
 import {Command, flags} from '@oclif/command'
+import { BlimOptimizer } from '../optimizer/BlimOptimizer'
+import { Image } from '../model/Image'
 
 export default class Optimize extends Command {
 
@@ -34,7 +36,14 @@ export default class Optimize extends Command {
   async run() {
     const {args, flags} = this.parse(Optimize)
 
-    
-    this.log(`hello ${flags.width} from ./src/commands/hello.ts`)
+    const optimizer: BlimOptimizer = new BlimOptimizer();
+    const image: Image = Image.fromAnypath(args['file']);
+    await optimizer.optimize(image, {
+      width: Number.parseInt(flags.width || '') || undefined,
+      height: Number.parseInt(flags.height || '') || undefined,
+      fit: flags.fit || undefined,
+      position: flags.position || undefined,
+    })
+    this.log(`Processed image and put optimized image to ${image.optimizedPath}`);
   }
 }
