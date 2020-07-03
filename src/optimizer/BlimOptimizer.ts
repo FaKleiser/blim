@@ -1,4 +1,4 @@
-import * as sharp from 'sharp';
+import sharp from 'sharp';
 import { Image } from '../model/Image';
 import { OptimizerOptions } from './OptimizerOptions';
 import * as fs from 'fs';
