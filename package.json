@@ -1,7 +1,7 @@
 {
   "name": "blim",
   "description": "Blazing fast image optimisation for blog post images",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Fabian Keller <dev@fabian-keller.de>",
   "license": "MIT",
   "main": "lib/index.js",

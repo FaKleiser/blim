@@ -14,7 +14,7 @@ $ npm install -g blim
 $ blim COMMAND
 running command...
 $ blim (-v|--version|version)
-blim/0.0.1 darwin-x64 node-v10.17.0
+blim/0.0.2 darwin-x64 node-v10.17.0
 $ blim --help [COMMAND]
 USAGE
   $ blim COMMAND
