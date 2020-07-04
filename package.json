@@ -19,11 +19,12 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "prepack": "rm -rf lib && npm run build && oclif-dev manifest && oclif-dev readme",
+    "update-readme": "oclif-dev readme",
+    "prepack": "rm -rf lib && npm run build && oclif-dev manifest && npm run update-readme",
     "postpack": "rm -f oclif.manifest.json",
     "test": "jest",
     "start": "ts-node blim.ts",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "npm run update-readme && git add README.md"
   },
   "dependencies": {
     "@oclif/command": "^1.6.1",

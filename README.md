@@ -1,12 +1,30 @@
 # blim
 
+![npm](https://img.shields.io/npm/v/blim?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/FaKeller/blim/Build%20Blim?style=flat-square)
+
 Blazing fast image optimization for blog post images.
+
+`blim` helps you optimize images from the command line to be used on blogs.
+Typically, `blim` is within the context of statically generated pages.
+Current features include:
+
+- Resize and shrink images to a target width/height.
+- Crop images automagically if the original image has a different aspect ratio than the desired output resolution.
+- Compress images to reduce file size. Usually way better than what other tools do.
+
+Table of contents:
 
 <!-- toc -->
 * [blim](#blim)
 * [Usage](#usage)
 * [Commands](#commands)
+* [Contributing](#contributing)
+* [[Change Log](CHANGELOG.md)](#change-logchangelogmd)
+* [[License](LICENSE)](#licenselicense)
 <!-- tocstop -->
+
+
 # Usage
 <!-- usage -->
 ```sh-session
@@ -21,6 +39,8 @@ USAGE
 ...
 ```
 <!-- usagestop -->
+
+
 # Commands
 <!-- commands -->
 * [`blim help [COMMAND]`](#blim-help-command)
@@ -66,3 +86,22 @@ OPTIONS
       The target width to resize to
 ```
 <!-- commandsstop -->
+
+# Contributing
+
+Open a PR :-)
+
+
+# [Change Log](CHANGELOG.md)
+
+See all changes made to this project in the [change log](CHANGELOG.md). This project follows [semantic versioning](http://semver.org/).
+
+
+# [License](LICENSE)
+
+This project is licensed under the terms of the [MIT license](LICENSE).
+
+
+---
+
+Project created and maintained by [Fabian Keller](https://www.fabian-keller.de).
